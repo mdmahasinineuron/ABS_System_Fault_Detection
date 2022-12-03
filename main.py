@@ -4,15 +4,11 @@ import pymongo
 client = pymongo.MongoClient("mongodb://localhost:27017/neurolabDB")
 
 # Database Name
-dataBase = client["neurolabDB"]
+dataBase = client["ABS_Fault_Detection"]
 
 # Collection  Name
-collection = dataBase['Products']
+collection = ABS_Fault_Detection['Fault_Data']
 
-# Sample data
-d = {'companyName': 'iNeuron',
-     'product': 'Affordable AI',
-     'courseOffered': 'Machine Learning with Deployment'}
 
 # Insert above records in the collection
 rec = collection.insert_one(d)
